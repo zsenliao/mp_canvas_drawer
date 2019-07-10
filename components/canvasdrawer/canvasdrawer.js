@@ -240,7 +240,7 @@ Component({
         if (this.cache[url]) {
           resolve(this.cache[url])
         } else {
-          const objExp = new RegExp(/^http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/)
+          const objExp = new RegExp(/^(http(s)?|cloud):\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/)
           if (objExp.test(url)) {
             wx.getImageInfo({
               src: url,
